@@ -9,7 +9,8 @@
   "license": "MIT",
   "dependencies": {
     "got": "^6.1.1",
-    "meow": "^3.7.0"
+    "chalk": "^1.1.1",
+    "minimist": "^1.2.0"
   },
   "keywords": [
     "imdb",
@@ -17,9 +18,7 @@
     "cli"
   ],
   "devDependencies": {
-    "ava": "^0.11.0",
-    "chalk": "^1.1.1",
-    "minimist": "^1.2.0"
+    "ava": "^0.11.0"
   },
   "bin": {
     "imdbtr": "./bin/imdbtr"
