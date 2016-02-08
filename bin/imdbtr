@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const cli = require('../cli');
+const argv = process.argv.slice(2);
+
+cli.run(argv);
