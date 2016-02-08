@@ -15,7 +15,11 @@ test('should return the name of movie when it\'s valid title', t => {
 test('should return error when it\'s a empty string', t => {
   let response = api('');
 
-  return response.then(result => {
-    t.is(result.Response, 'False');
-  });
+  t.is(response, false);
+});
+
+test('should return error when it\'s a invalid entry', t => {
+  let response = api();
+
+  t.is(response, false);
 });

@@ -7,6 +7,9 @@ const headers = {
 };
 
 const api = name => {
+  if (!name)
+    return false;
+
   let movie = got(`${provider}t=${name}`, {headers})
     .then(response => {
       return JSON.parse(response.body);
