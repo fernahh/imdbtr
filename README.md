@@ -1,0 +1,3 @@
+# imdbtr
+
+> IMDB on terminal
