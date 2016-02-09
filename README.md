@@ -1,5 +1,7 @@
 # imdbtr
 
+[![Build Status](https://api.travis-ci.org/fernahh/imdbtr.svg?branch=master)](https://travis-ci.org/fernahh/imdbtr)
+
 > IMDb on terminal
 
 ## Install
