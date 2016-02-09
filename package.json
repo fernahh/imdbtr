@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "IMDB on terminal",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "lint": "xo",
+    "check": "npm run test && npm run lint"
   },
   "author": "@fernahh",
   "license": "MIT",
@@ -23,5 +25,9 @@
   },
   "bin": {
     "imdbtr": "./bin/imdbtr"
+  },
+  "xo": {
+    "esnext": true,
+    "space": 2
   }
 }

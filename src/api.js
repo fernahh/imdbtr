@@ -7,19 +7,20 @@ const headers = {
 };
 
 const api = name => {
-  if (!name)
+  if (!name) {
     return false;
+  }
 
-  let movie = got(`${provider}t=${name}`, {headers})
+  const movie = got(`${provider}t=${name}`, {headers})
     .then(response => {
-      let result = JSON.parse(response.body);
+      const result = JSON.parse(response.body);
       return result.Response === 'False' ? false : result;
     })
     .catch(error => {
-      return false;
+      return error.body;
     });
 
   return movie;
-}
+};
 
 module.exports = api;
