@@ -12,10 +12,11 @@ const api = name => {
 
   let movie = got(`${provider}t=${name}`, {headers})
     .then(response => {
-      return JSON.parse(response.body);
+      let result = JSON.parse(response.body);
+      return result.Response === 'False' ? false : result;
     })
     .catch(error => {
-      return JSON.parse(error.body);
+      return false;
     });
 
   return movie;
