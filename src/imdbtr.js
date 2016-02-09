@@ -2,7 +2,7 @@
 
 const api = require('./api.js');
 const chalk = require('chalk');
-const boxen = require('boxen');
+const figures = require('figures');
 
 const imdbtr = name => {
   let movie = api(name);
@@ -14,13 +14,14 @@ const imdbtr = name => {
     let movieRes = `
   ${chalk.black.bgYellow.bold(result.Title)} (${result.Year}) on IMDb:
 
+  ${chalk.yellow(`${figures.star} ${result.imdbRating}`)}
+
   Director: ... ${result.Director}
   Writer: ..... ${result.Writer}
-  Rating: ..... ${result.imdbRating}
   Genre: ...... ${chalk.italic(result.Genre)}
     `;
 
-    console.log(boxen(movieRes, {padding: 1, borderColor: 'yellow'}));
+    console.log(movieRes);
   });
 };
 

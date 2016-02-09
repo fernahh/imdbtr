@@ -8,8 +8,8 @@
   "author": "@fernahh",
   "license": "MIT",
   "dependencies": {
-    "boxen": "^0.2.0",
     "chalk": "^1.1.1",
+    "figures": "^1.4.0",
     "got": "^6.1.1",
     "minimist": "^1.2.0"
   },
