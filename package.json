@@ -8,8 +8,9 @@
   "author": "@fernahh",
   "license": "MIT",
   "dependencies": {
-    "got": "^6.1.1",
+    "boxen": "^0.2.0",
     "chalk": "^1.1.1",
+    "got": "^6.1.1",
     "minimist": "^1.2.0"
   },
   "keywords": [
