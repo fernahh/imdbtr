@@ -2,8 +2,29 @@
 
 'use strict';
 
-const cli = require('../cli');
+const chalk = require('chalk');
 const minimist = require('minimist');
+const cli = require('../cli');
 const argv = minimist(process.argv.slice(2));
 
-cli.run(argv);
+const usage = `
+	${chalk.black.bgYellow.bold(`imdbtr`)} - IMDb on terminal
+
+	Usage
+	  $ imdbtr <movie>
+
+	Example
+	  $ imdbtr 'The Godfather'
+
+	`;
+
+if (argv.h) {
+	console.log(usage);
+	return;
+}
+
+if ((argv._.join(' ')).length > 0) {
+	cli.run(argv);
+} else {
+	console.log(usage);
+}

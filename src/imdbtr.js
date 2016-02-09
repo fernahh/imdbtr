@@ -7,6 +7,10 @@ const figures = require('figures');
 const imdbtr = name => {
   const movie = api(name);
 
+  if (!movie) {
+    return false;
+  }
+
   return movie.then(result => {
     if (!result) {
       return console.log(chalk.yellow.bold('Movie not found on IMDB :('));
