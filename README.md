@@ -4,6 +4,8 @@
 
 > IMDb on terminal
 
+![example of usage](./example.gif)
+
 ## Install
 
 ```
