@@ -15,8 +15,22 @@ $ npm install -g imdbtr
 ## Usage
 
 ```
-$ imdbtr The Godfather
+$ imdbtr 'The Godfather'
 ```
+
+## Contributing
+
+Once you've made your great commits:
+
+1. Fork the project
+2. Create your feature branch: `git checkout -b my-feature`
+3. Push to the branch: `git push origin my-feature`
+4. Submit a pull request!
+
+## Resources
+
+- API provided by [OMDb API](http://www.omdbapi.com/);
+- Some modules by [@sindresorhus](https://github.com/sindresorhus).
 
 ## License
 
