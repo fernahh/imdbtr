@@ -1,14 +1,26 @@
 {
   "name": "imdbtr",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "IMDB on terminal",
+  "license": "MIT",
+  "repository": "fernahh/imdbtr",
   "scripts": {
     "test": "ava",
     "lint": "xo",
     "check": "npm run test && npm run lint"
   },
-  "author": "@fernahh",
-  "license": "MIT",
+  "author": {
+    "name": "Luiz Fernando Rodrigues",
+    "email": "fernahh@gmail.com",
+    "url": "http://blog.fernahh.com.br"
+  },
+  "bugs": {
+    "url": "https://github.com/fernahh/imdbtr/issues"
+  },
+  "homepage": "https://github.com/fernahh/imdbtr#readme",
+  "engines": {
+    "node": ">=4"
+  },
   "dependencies": {
     "chalk": "^1.1.1",
     "figures": "^1.4.0",
