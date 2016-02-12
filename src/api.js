@@ -6,14 +6,31 @@ const headers = {
   'user-agent': 'https://www.github.com/fernahh/imdbtr'
 };
 
+const normalizeName = name => {
+  const nameList = name.split(' ', 2);
+  let normalizedList = [];
+
+  if (nameList.length > 1) {
+    normalizedList = nameList.map(currName => {
+      return encodeURI(currName);
+    });
+
+    normalizedList = normalizedList.join('+');
+  }
+
+  return normalizedList.toString();
+};
+
 const api = name => {
   if (!name) {
     return false;
   }
 
-  const movie = got(`${provider}t=${name}`, {headers})
+  const normalizedName = normalizeName(name);
+
+  const movie = got(`${provider}t=${normalizedName}`, {headers, json: true})
     .then(response => {
-      const result = JSON.parse(response.body);
+      const result = response.body;
       return result.Response === 'False' ? false : result;
     })
     .catch(error => {
