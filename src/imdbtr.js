@@ -23,7 +23,9 @@ const imdbtr = name => {
 
   Director: ... ${result.Director}
   Writer: ..... ${result.Writer}
+  Actors: ..... ${result.Actors}
   Genre: ...... ${chalk.italic(result.Genre)}
+  Plot: ....... ${result.Plot}
     `;
 
     console.log(movieRes);
