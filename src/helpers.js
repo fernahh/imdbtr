@@ -16,7 +16,7 @@ const normalizeName = name => {
 };
 
 const helpers = {
-  normalizeName: normalizeName
-}
+  normalizeName
+};
 
 module.exports = helpers;
