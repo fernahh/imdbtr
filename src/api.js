@@ -1,24 +1,10 @@
 'use strict';
 
+const helpers = require('./helpers');
 const got = require('got');
 const provider = 'http://www.omdbapi.com/?';
 const headers = {
   'user-agent': 'https://www.github.com/fernahh/imdbtr'
-};
-
-const normalizeName = name => {
-  const nameList = name.split(' ', 2);
-  let normalizedList = [];
-
-  if (nameList.length > 1) {
-    normalizedList = nameList.map(currName => {
-      return encodeURI(currName);
-    });
-
-    normalizedList = normalizedList.join('+');
-  }
-
-  return normalizedList.toString();
 };
 
 const api = name => {
@@ -26,7 +12,7 @@ const api = name => {
     return false;
   }
 
-  const normalizedName = normalizeName(name);
+  const normalizedName = helpers.normalizeName(name);
 
   const movie = got(`${provider}t=${normalizedName}`, {headers, json: true})
     .then(response => {
