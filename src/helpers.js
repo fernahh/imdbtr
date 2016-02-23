@@ -1,7 +1,7 @@
 'use strict';
 
 const normalizeName = name => {
-  const nameList = name.split(' ', 2);
+  const nameList = name.split(' ');
 
   let normalizedList = nameList.map(currName => {
     return encodeURI(currName);
