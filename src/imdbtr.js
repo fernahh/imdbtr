@@ -2,6 +2,7 @@
 
 const chalk = require('chalk');
 const figures = require('figures');
+const ora = require('ora');
 const api = require('./api.js');
 
 const imdbtr = name => {
@@ -11,7 +12,9 @@ const imdbtr = name => {
     return false;
   }
 
+  const spinner = ora(`Searching for ${chalk.yellow(name)}`).start();
   return movie.then(result => {
+    spinner.stop();
     if (!result) {
       return console.log(chalk.yellow.bold('Movie not found on IMDB :('));
     }
