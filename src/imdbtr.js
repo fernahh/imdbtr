@@ -1,8 +1,8 @@
 'use strict';
 
-const api = require('./api.js');
 const chalk = require('chalk');
 const figures = require('figures');
+const api = require('./api.js');
 
 const imdbtr = name => {
   const movie = api(name);
