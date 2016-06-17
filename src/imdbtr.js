@@ -32,6 +32,10 @@ const imdbtr = name => {
     `;
 
     console.log(movieRes);
+  }).catch(err => {
+    spinner.stop();
+    console.error(chalk.red.bold('Something went wrong :('));
+    console.error(err);
   });
 };
 
