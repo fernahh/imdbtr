@@ -1,7 +1,8 @@
 'use strict';
 
-const helpers = require('./helpers');
 const got = require('got');
+const helpers = require('./helpers');
+
 const provider = 'http://www.omdbapi.com/?';
 const headers = {
   'user-agent': 'https://www.github.com/fernahh/imdbtr'
@@ -19,8 +20,8 @@ const api = name => {
       const result = response.body;
       return result.Response === 'False' ? false : result;
     })
-    .catch(error => {
-      return error.body;
+    .catch(err => {
+      return err.body;
     });
 
   return movie;

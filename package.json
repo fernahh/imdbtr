@@ -22,10 +22,11 @@
     "node": ">=4"
   },
   "dependencies": {
-    "chalk": "^1.1.1",
-    "figures": "^1.4.0",
-    "got": "^6.1.1",
-    "minimist": "^1.2.0"
+    "chalk": "^1.1.3",
+    "figures": "^1.7.0",
+    "got": "^6.3.0",
+    "minimist": "^1.2.0",
+    "ora": "^0.2.3"
   },
   "keywords": [
     "imdb",
@@ -33,8 +34,9 @@
     "cli"
   ],
   "devDependencies": {
-    "ava": "^0.11.0",
-    "xo": "^0.12.1"
+    "ava": "^0.15.2",
+    "sinon": "^1.17.4",
+    "xo": "^0.16.0"
   },
   "bin": {
     "imdbtr": "./bin/imdbtr"
