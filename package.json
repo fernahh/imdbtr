@@ -36,7 +36,7 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "sinon": "^1.17.4",
-    "xo": "^0.16.0"
+    "xo": "^0.17.0"
   },
   "bin": {
     "imdbtr": "./bin/imdbtr"
