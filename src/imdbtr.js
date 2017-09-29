@@ -20,17 +20,16 @@ const imdbtr = name => {
     }
 
     const movieRes = `
-  ${chalk.black.bgYellow.bold(result.Title)} (${result.Year}) on IMDb:
+  ${chalk.black.bgYellow.bold(result.title)} (${result.year}) on IMDb:
 
-  ${chalk.yellow(`${figures.star} ${result.imdbRating}`)} 
-  ${chalk.green(`${figures.squareSmallFilled} ${result.Metascore}/100`)}
-  
-  Runtime: .... ${result.Runtime}
-  Director: ... ${result.Director}
-  Writer: ..... ${result.Writer}
-  Actors: ..... ${result.Actors}
-  Genre: ...... ${chalk.italic(result.Genre)}
-  Plot: ....... ${result.Plot}
+  ${chalk.yellow(`${figures.star} ${result.rating}`)}
+
+  Duration: .... ${result.length} min
+  Director: .... ${result.director}
+  Writer: ...... ${result.writers.join(', ')}
+  Stars: ....... ${result.stars.join(', ')}
+  Genre: ....... ${chalk.italic(result.genre.join(', '))}
+  Storyline: ... ${result.storyline}
     `;
 
     console.log(movieRes);

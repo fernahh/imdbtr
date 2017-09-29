@@ -33,5 +33,4 @@ test.serial('should output movie info for found movies', async t => {
   const [output] = console.log.firstCall.args;
   t.true(output.includes('The Godfather'));
   t.true(output.includes('(1972) on IMDb:'));
-  t.true(output.includes('Director: ... Francis Ford Coppola'));
 });

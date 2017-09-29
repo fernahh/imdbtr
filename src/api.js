@@ -3,7 +3,7 @@
 const got = require('got');
 const helpers = require('./helpers');
 
-const provider = 'http://www.omdbapi.com/?';
+const provider = 'http://www.theimdbapi.org/api/find/movie?';
 const headers = {
   'user-agent': 'https://www.github.com/fernahh/imdbtr'
 };
@@ -15,10 +15,10 @@ const api = name => {
 
   const normalizedName = helpers.normalizeName(name);
 
-  const movie = got(`${provider}t=${normalizedName}`, {headers, json: true})
+  const movie = got(`${provider}title=${normalizedName}`, {headers, json: true})
     .then(response => {
       const result = response.body;
-      return result.Response === 'False' ? false : result;
+      return result === null ? false : result[0];
     })
     .catch(err => {
       return err.body;
