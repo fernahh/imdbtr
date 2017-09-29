@@ -22,8 +22,10 @@ const imdbtr = name => {
     const movieRes = `
   ${chalk.black.bgYellow.bold(result.Title)} (${result.Year}) on IMDb:
 
-  ${chalk.yellow(`${figures.star} ${result.imdbRating}`)}
-
+  ${chalk.yellow(`${figures.star} ${result.imdbRating}`)} 
+  ${chalk.green(`${figures.squareSmallFilled} ${result.Metascore}/100`)}
+  
+  Runtime: .... ${result.Runtime}
   Director: ... ${result.Director}
   Writer: ..... ${result.Writer}
   Actors: ..... ${result.Actors}
