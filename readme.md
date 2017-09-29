@@ -4,7 +4,7 @@
 
 > IMDb on terminal
 
-[![Example of usage](https://asciinema.org/a/7h58k84y14ylzybggcw675bob.png)](https://asciinema.org/a/7h58k84y14ylzybggcw675bob)
+![Example of usage](http://rawgit.com/fernahh/imdbtr/master/example.gif)
 
 ## Install
 
