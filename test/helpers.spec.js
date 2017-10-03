@@ -16,5 +16,5 @@ test(`should return a name with one word`, t => {
 });
 
 test(`should return serialized query params`, t => {
-  t.is(helpers.buildQuery({'a':'b', 'c':'d'}), 'a=b&c=d');
+  t.is(helpers.buildQuery({a: 'b', c: 'd'}), 'a=b&c=d');
 });

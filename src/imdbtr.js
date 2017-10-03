@@ -7,14 +7,13 @@ const api = require('./api.js');
 const helpers = require('./helpers.js');
 
 const imdbtr = params => {
-
   if (!params) {
     return false;
   }
 
   const query = helpers.buildQuery(params);
   const movie = api(query);
-  
+
   if (!movie) {
     return false;
   }

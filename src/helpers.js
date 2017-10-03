@@ -1,8 +1,8 @@
 'use strict';
 
 const paramNameMap = Object.freeze({
-  '_': 'title',
-  'y': 'year'
+  _: 'title',
+  y: 'year'
 });
 
 const normalizeName = name => {
@@ -22,12 +22,12 @@ const buildQuery = params => {
     .map(key => {
       let value = params[key];
       if (key === 'title') {
-        value = normalizeName(value.join(' '))
+        value = normalizeName(value.join(' '));
       }
-      return `${paramNameMap[key] || key}=${value}`
+      return `${paramNameMap[key] || key}=${value}`;
     })
     .join('&');
-}
+};
 
 const helpers = {
   normalizeName,
