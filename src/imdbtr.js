@@ -4,15 +4,22 @@ const chalk = require('chalk');
 const figures = require('figures');
 const ora = require('ora');
 const api = require('./api.js');
+const helpers = require('./helpers.js');
 
-const imdbtr = name => {
-  const movie = api(name);
+const imdbtr = params => {
 
+  if (!params) {
+    return false;
+  }
+
+  const query = helpers.buildQuery(params);
+  const movie = api(query);
+  
   if (!movie) {
     return false;
   }
 
-  const spinner = ora(`Searching for ${chalk.yellow(name)}`).start();
+  const spinner = ora(`Searching for ${chalk.yellow(query)}`).start();
   return movie.then(result => {
     spinner.stop();
     if (!result) {

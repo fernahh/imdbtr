@@ -14,3 +14,7 @@ test(`should return a name with accent encoded`, t => {
 test(`should return a name with one word`, t => {
   t.is(helpers.normalizeName('Deadpool'), 'Deadpool');
 });
+
+test(`should return serialized query params`, t => {
+  t.is(helpers.buildQuery({'a':'b', 'c':'d'}), 'a=b&c=d');
+});
