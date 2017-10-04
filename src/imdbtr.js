@@ -5,8 +5,8 @@ const figures = require('figures');
 const ora = require('ora');
 const api = require('./api.js');
 
-const imdbtr = name => {
-  const movie = api(name);
+const imdbtr = (name,year) => {
+  const movie = api(name,year);
 
   if (!movie) {
     return false;

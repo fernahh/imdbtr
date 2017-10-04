@@ -2,9 +2,10 @@
 
 const imdbtr = require('./src/imdbtr.js');
 
-const run = argv => imdbtr(argv);
+const run = (argv1,argv2) => imdbtr(argv1,argv2);
 
 exports.run = argv => {
   const movie = argv._.join(' ');
-  run(movie);
+  const year = argv.y;
+  run(movie,year);
 };

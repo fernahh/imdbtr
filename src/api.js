@@ -8,14 +8,15 @@ const headers = {
   'user-agent': 'https://www.github.com/fernahh/imdbtr'
 };
 
-const api = name => {
+const api = (name,year) => {
   if (!name) {
     return false;
   }
 
   const normalizedName = helpers.normalizeName(name);
 
-  const movie = got(`${provider}title=${normalizedName}`, {headers, json: true})
+
+  const movie = got(`${provider}title=${normalizedName}&year=${year}`, {headers, json: true})
     .then(response => {
       const result = response.body;
       return result === null ? false : result[0];

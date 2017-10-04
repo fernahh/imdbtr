@@ -4,14 +4,14 @@
 
 const chalk = require('chalk');
 const minimist = require('minimist');
-const cli = require('../cli');
+const cli = require('../cli.js');
 const argv = minimist(process.argv.slice(2));
 
 const usage = `
 	${chalk.black.bgYellow.bold(`imdbtr`)} - IMDb on terminal
 
 	Usage
-	  $ imdbtr <movie>
+	  $ imdbtr <movie> -y <year> -a <actor>
 
 	Example
 	  $ imdbtr 'The Godfather'
