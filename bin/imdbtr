@@ -11,12 +11,15 @@ const usage = `
 	${chalk.black.bgYellow.bold(`imdbtr`)} - IMDb on terminal
 
 	Usage
-		$ imdbtr <movie>
-		or
-		$ imdbtr <movie> -y <year>
-
-	Example
-	  $ imdbtr 'The Godfather' -y 1972
+	  $ imdbtr [OPTIONS]
+	
+	Example:
+	  $ imdbtr "The Godfather" --year 1972
+	
+	Options:
+	  -y --year            Filter movie by year
+	  -h --help            Display usage details
+	  
 
 	`;
 

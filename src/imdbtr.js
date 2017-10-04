@@ -18,7 +18,9 @@ const imdbtr = params => {
     return false;
   }
 
-  const spinner = ora(`Searching for ${chalk.yellow(query)}`).start();
+  const values = Object.values(params).join(', ');
+  const spinner = ora(`Searching for ${chalk.yellow(values)}`).start();
+
   return movie.then(result => {
     spinner.stop();
     if (!result) {
