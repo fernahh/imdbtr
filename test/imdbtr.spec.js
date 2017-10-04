@@ -23,13 +23,13 @@ test.serial('should return false for no movie name', async t => {
 });
 
 test.serial('should log an error for not found movies', async t => {
-  await imdbtr('thismoviecantbefoundatall');
+  await imdbtr({_: ['thismoviecantbefoundatall']});
   const [output] = console.log.firstCall.args;
   t.true(output.includes('Movie not found on IMDB :('));
 });
 
 test.serial('should output movie info for found movies', async t => {
-  await imdbtr('The Godfather');
+  await imdbtr({_: ['The Godfather']});
   const [output] = console.log.firstCall.args;
   t.true(output.includes('The Godfather'));
   t.true(output.includes('(1972) on IMDb:'));
