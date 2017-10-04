@@ -11,8 +11,9 @@ const imdbtr = params => {
     return false;
   }
 
-  const query = helpers.buildQuery(params);
-  const movie = api(query);
+  const { _, year, genre } = params;
+  const query = helpers.buildQuery({ _, year });
+  const movie = api(query, genre);
 
   if (!movie) {
     return false;
