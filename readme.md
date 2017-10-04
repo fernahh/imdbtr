@@ -19,10 +19,11 @@ Usage
   $ imdbtr [OPTIONS]
 
 Example:
-  $ imdbtr "The Godfather" --year 1972
+  $ imdbtr "The Godfather" --year 1972 --genre crime
 
 Options:
   -y --year            Filter movie by year
+     --genre           Filter movie by genre
   -h --help            Display usage details
 ```
 
