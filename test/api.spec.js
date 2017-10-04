@@ -17,6 +17,12 @@ test(`should return correct year for the movie`, async t => {
   t.is(result.year, '1990');
 });
 
+test.only(`should return correct genre for the movie`, async t => {
+  const result = await api(helpers.buildQuery({title: ['The Godfather'] }), 'action');
+
+  t.is(result.genre.indexOf('Action') >= 0, true);
+});
+
 test(`should return the name of movie when it's valid title with accented`, async t => {
   const result = await api(helpers.buildQuery({title: ['Garoto Cósmico']}));
 

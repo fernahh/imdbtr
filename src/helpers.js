@@ -20,7 +20,7 @@ const buildQuery = params => {
   return Object
     .keys(params)
     .map(key => {
-      let value = params[key];
+      let value = params[key] || '';
       if (key === 'title') {
         value = normalizeName(value.join(' '));
       }
