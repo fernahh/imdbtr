@@ -1,19 +1,18 @@
 {
-  "name": "imdbtr",
+  "name": "imdbtrx",
   "version": "1.0.0",
   "description": "IMDB on terminal",
   "license": "MIT",
-  "repository": "fernahh/imdbtr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernahh/imdbtr.git"
+  },
   "scripts": {
     "test": "ava",
     "lint": "xo",
     "check": "npm run test && npm run lint"
   },
-  "author": {
-    "name": "Luiz Fernando Rodrigues",
-    "email": "fernahh@gmail.com",
-    "url": "http://blog.fernahh.com.br"
-  },
+  "author": "Luiz Fernando Rodrigues <fernahh@gmail.com> (http://blog.fernahh.com.br)",
   "bugs": {
     "url": "https://github.com/fernahh/imdbtr/issues"
   },
@@ -23,8 +22,10 @@
   },
   "dependencies": {
     "chalk": "^1.1.3",
+    "express": "^4.16.1",
     "figures": "^2.0.0",
     "got": "^6.3.0",
+    "imdbtr": "^1.0.0",
     "minimist": "^1.2.0",
     "ora": "^0.3.0"
   },
@@ -44,5 +45,9 @@
   "xo": {
     "esnext": true,
     "space": 2
+  },
+  "main": "cli.js",
+  "directories": {
+    "test": "test"
   }
 }
