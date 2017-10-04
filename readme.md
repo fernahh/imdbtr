@@ -15,7 +15,15 @@ $ npm install -g imdbtr
 ## Usage
 
 ```
-$ imdbtr 'The Godfather'
+Usage
+  $ imdbtr [OPTIONS]
+
+Example:
+  $ imdbtr "The Godfather" --year 1972
+
+Options:
+  -y --year            Filter movie by year
+  -h --help            Display usage details
 ```
 
 ## Contributing
