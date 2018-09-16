@@ -37,7 +37,7 @@ Once you've made your great commits:
 
 ## Resources
 
-- API provided by [The IMDB API](http://www.theimdbapi.org/);
+- API provided by [OMDb API](http://www.omdbapi.com/);
 - Some modules by [@sindresorhus](https://github.com/sindresorhus).
 
 ## License

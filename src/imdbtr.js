@@ -28,23 +28,23 @@ const imdbtr = params => {
     }
 
     const movieRes = `
-  ${chalk.black.bgYellow.bold(result.title)} (${result.year}) on IMDb:
+  ${chalk.black.bgYellow.bold(result.Title)} (${result.Year}) on IMDb:
 
-  ${chalk.yellow(`${figures.star} ${result.rating}`)}
+  ${chalk.yellow(`${figures.star} ${result.imdbRating}`)}
 
-  Duration: .... ${result.length} min
-  Director: .... ${result.director}
-  Writer: ...... ${result.writers.join(', ')}
-  Stars: ....... ${result.stars.join(', ')}
-  Genre: ....... ${chalk.italic(result.genre.join(', '))}
-  Storyline: ... ${result.storyline}
+  Duration: .... ${result.Runtime} min
+  Director: .... ${result.Director}
+  Writer: ...... ${result.Writer}
+  Stars: ....... ${result.Actors}
+  Genre: ....... ${chalk.italic(result.Genre)}
+  Plot: ... ${result.Plot}
     `;
 
     console.log(movieRes);
-  }).catch(err => {
+  }).catch(error => {
     spinner.stop();
     console.error(chalk.red.bold('Something went wrong :('));
-    console.error(err);
+    console.error(error);
   });
 };
 
