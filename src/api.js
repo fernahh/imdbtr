@@ -2,7 +2,7 @@
 
 const got = require('got');
 
-const provider = 'http://www.theimdbapi.org/api/find/movie?';
+const provider = 'http://www.omdbapi.com/?apikey=315796c1&';
 const headers = {
   'user-agent': 'https://www.github.com/fernahh/imdbtr'
 };
@@ -14,10 +14,10 @@ const api = query => {
   const movie = got(`${provider}${query}`, {headers, json: true})
     .then(response => {
       const result = response.body;
-      return result === null ? false : result[0];
+      return result.Response === 'False' ? false : result;
     })
-    .catch(err => {
-      return err.body;
+    .catch(error => {
+      return error.body;
     });
 
   return movie;

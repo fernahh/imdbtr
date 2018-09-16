@@ -24,7 +24,8 @@ const buildQuery = params => {
       if (key === 'title') {
         value = normalizeName(value.join(' '));
       }
-      return `${paramNameMap[key] || key}=${value}`;
+      const param = paramNameMap[key] || key;
+      return `${param.charAt(0)}=${value}`;
     })
     .join('&');
 };
