@@ -4,7 +4,7 @@ const test = require('ava');
 const sinon = require('sinon');
 const imdbtr = require('../src/imdbtr');
 
-const sandbox = sinon.sandbox.create({
+const sandbox = sinon.createSandbox({
   useFakeTimers: false,
   useFakeServer: false
 });
