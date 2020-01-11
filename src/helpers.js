@@ -30,9 +30,19 @@ const buildQuery = params => {
     .join('&');
 };
 
+const formatDate = string => {
+  let [ strMminutes ] = string.split(" ");
+  let hours = Number(strMminutes) / 60;
+  let rhours = Math.round(hours);
+  let minutes = (hours - rhours) * 60;
+  let rminutes = Math.round(minutes);
+  return `${rhours} h ${rminutes} min`;
+}
+
 const helpers = {
   normalizeName,
-  buildQuery
+  buildQuery,
+  formatDate
 };
 
 module.exports = helpers;
