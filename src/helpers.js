@@ -36,7 +36,7 @@ const formatDate = string => {
   const rhours = Math.round(hours);
   const minutes = (hours - rhours) * 60;
   const rminutes = Math.abs(Math.round(minutes));
-  return `${rhours} h ${rminutes} min`;
+  return `${rhours}h${rminutes}min`;
 };
 
 const helpers = {
