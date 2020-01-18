@@ -32,7 +32,7 @@ const imdbtr = params => {
 
   ${chalk.yellow(`${figures.star} ${result.imdbRating}`)}
 
-  Duration: .... ${result.Runtime} min
+  Duration: .... ${helpers.formatDate(result.Runtime)}
   Director: .... ${result.Director}
   Writer: ...... ${result.Writer}
   Stars: ....... ${result.Actors}
